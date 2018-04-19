@@ -4,6 +4,12 @@
 
 {% block content %}
 
+{% if error %}
+{{error}}
+{% endif %}
+<br>
+<br>
+
 <h1>Sign Up!</h1>
 
 <form action="{% url 'signup' %}" method="post">
