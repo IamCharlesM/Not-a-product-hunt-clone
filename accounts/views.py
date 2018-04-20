@@ -32,5 +32,9 @@ def login(request):
 
 
 def logout(request):
-    #Need to add route to homepage
-   return render(request, 'accounts/signup.html')
+   if request.method == 'POST':
+       auth.logout(request)
+       return redirect('home')
+       
+   else:
+       return render(request, 'accounts/signup.html')
