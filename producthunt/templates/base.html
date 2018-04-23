@@ -16,6 +16,7 @@
         crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{% static 'open-iconic/font/css/open-iconic-bootstrap.css' %}" rel="stylesheet">
 
 </head>
 
@@ -33,6 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
+                    <a class="nav-item nav-link" href="{% url 'create' %}"><span class="oi oi-plus"></span></a>
                     <a class="nav-item nav-link" href="javascript:{document.getElementById('logout').submit()}"> Log Out</a>
                     <form action="{% url 'logout' %}" id='logout' method="post" >
                         {% csrf_token %}
