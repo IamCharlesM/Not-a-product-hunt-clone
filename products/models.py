@@ -22,7 +22,7 @@ class Product(models.Model):
    
    #pub_date_pretty
     def pub_date_pretty(self):
-        return self.pub_date_pretty('%b %e %Y')
+        return self.pub_date.strftime('%b %e %Y')
 
     def __str__(self):
         return self.title
