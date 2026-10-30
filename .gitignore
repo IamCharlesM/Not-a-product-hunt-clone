@@ -10,7 +10,6 @@ local_settings.py
 db.sqlite3
 secret.py
 /myenv/
-temp_auto_push.bat
 /media
 /producthunt/static/
 /static/open-iconic/
@@ -23,4 +22,3 @@ temp_auto_push.bat
 # End of https://www.gitignore.io/api/django
 
 
-branch_structure.json
